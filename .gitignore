@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.*
+.venv/
+venv/
+.DS_Store
+.vscode/
+.idea/
+credentials.json
+secrets.json
+*.key
+*.pem

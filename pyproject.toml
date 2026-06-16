@@ -1,0 +1,10 @@
+[project]
+name = "ai-sdlc-codex-patterns"
+version = "0.1.0"
+description = "Sanitized portfolio examples for AI-enabled SDLC automation patterns."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
