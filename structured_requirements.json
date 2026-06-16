@@ -1,0 +1,49 @@
+{
+  "initiative": "Utility Invoice Status Dashboard",
+  "problem": "Operations lacks a centralized way to track monthly utility invoice status by property.",
+  "users": [
+    "Operations Analyst",
+    "Finance Reviewer",
+    "Accounting Partner"
+  ],
+  "goals": [
+    "Reduce manual invoice tracking",
+    "Improve visibility into blocked invoices",
+    "Support downstream billing readiness",
+    "Preserve traceability from source record to dashboard output"
+  ],
+  "functional_requirements": [
+    {
+      "id": "FR-001",
+      "text": "Display invoice status by property and billing month."
+    },
+    {
+      "id": "FR-002",
+      "text": "Flag invoices requiring human review."
+    },
+    {
+      "id": "FR-003",
+      "text": "Display standardized missing data reasons."
+    },
+    {
+      "id": "FR-004",
+      "text": "Allow export of invoice status for Finance and Accounting."
+    }
+  ],
+  "non_functional_requirements": [
+    {
+      "id": "NFR-001",
+      "text": "Use certified data sources where available."
+    },
+    {
+      "id": "NFR-002",
+      "text": "Maintain traceability between source data and dashboard output."
+    }
+  ],
+  "open_questions": [
+    "What refresh cadence is required?",
+    "What confidence threshold should route records to review?",
+    "Which export format does Finance require?"
+  ],
+  "source_request_preview": "# Synthetic Business Request\n\nThe Operations team wants a dashboard that shows monthly utility invoice status by property.\n\nThey need to see which invoices are received, pending extraction, ready for review, approved, or blocked due to missing data.\n\nThe current process is manual and requires analys"
+}

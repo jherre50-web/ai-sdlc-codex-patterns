@@ -1,0 +1,60 @@
+{
+  "tables": [
+    {
+      "name": "analytics.dim_property",
+      "certified": true,
+      "grain": "one row per property",
+      "columns": {
+        "property_id": "Unique property identifier",
+        "property_name": "Property display name",
+        "active_flag": "Active property indicator"
+      }
+    },
+    {
+      "name": "analytics.fact_utility_invoice",
+      "certified": true,
+      "grain": "one row per invoice",
+      "columns": {
+        "invoice_id": "Unique invoice identifier",
+        "property_id": "Related property",
+        "vendor_id": "Related utility vendor",
+        "billing_month": "Billing period",
+        "invoice_number": "Invoice number",
+        "invoice_status": "Current invoice status",
+        "missing_data_reason_code": "Missing data reason",
+        "total_amount": "Total invoice amount",
+        "last_updated_ts": "Last updated timestamp"
+      }
+    },
+    {
+      "name": "analytics.fact_meter_usage",
+      "certified": true,
+      "grain": "one row per property, meter, and billing month",
+      "columns": {
+        "property_id": "Related property",
+        "meter_id": "Utility meter",
+        "billing_month": "Billing period",
+        "usage_kwh": "Usage in kWh"
+      }
+    },
+    {
+      "name": "analytics.dim_vendor",
+      "certified": true,
+      "grain": "one row per vendor",
+      "columns": {
+        "vendor_id": "Vendor identifier",
+        "vendor_name": "Vendor display name"
+      }
+    },
+    {
+      "name": "analytics.invoice_review_status",
+      "certified": false,
+      "grain": "one row per invoice review task",
+      "columns": {
+        "invoice_id": "Related invoice",
+        "review_owner": "Assigned reviewer",
+        "review_status": "Review status"
+      }
+    }
+  ]
+}

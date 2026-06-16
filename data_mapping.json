@@ -1,0 +1,89 @@
+{
+  "report": "Monthly Utility Invoice Readiness Report",
+  "grain": "property_id + billing_month + invoice_id",
+  "mappings": [
+    {
+      "business_field": "Property ID",
+      "source_table": "analytics.dim_property",
+      "source_column": "property_id",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Property name",
+      "source_table": "analytics.dim_property",
+      "source_column": "property_name",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Billing month",
+      "source_table": "analytics.fact_utility_invoice",
+      "source_column": "billing_month",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Vendor name",
+      "source_table": "analytics.dim_vendor",
+      "source_column": "vendor_name",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Invoice number",
+      "source_table": "analytics.fact_utility_invoice",
+      "source_column": "invoice_number",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Invoice status",
+      "source_table": "analytics.fact_utility_invoice",
+      "source_column": "invoice_status",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Missing data reason",
+      "source_table": "analytics.fact_utility_invoice",
+      "source_column": "missing_data_reason_code",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Meter usage kWh",
+      "source_table": "analytics.fact_meter_usage",
+      "source_column": "usage_kwh",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Total invoice amount",
+      "source_table": "analytics.fact_utility_invoice",
+      "source_column": "total_amount",
+      "certified_source": true,
+      "requires_review": false
+    },
+    {
+      "business_field": "Review owner",
+      "source_table": "analytics.invoice_review_status",
+      "source_column": "review_owner",
+      "certified_source": false,
+      "requires_review": true
+    },
+    {
+      "business_field": "Last updated timestamp",
+      "source_table": "analytics.fact_utility_invoice",
+      "source_column": "last_updated_ts",
+      "certified_source": true,
+      "requires_review": false
+    }
+  ],
+  "review_required": true,
+  "review_notes": [
+    "Confirm report grain before implementation.",
+    "Review non-certified sources with the data owner.",
+    "Validate join row counts and null rates before release."
+  ]
+}
