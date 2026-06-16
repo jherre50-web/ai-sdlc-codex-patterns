@@ -1,11 +1,8 @@
 # Manifest
 
 - `.gitignore`
-- `.pytest_cache/.gitignore`
-- `.pytest_cache/CACHEDIR.TAG`
-- `.pytest_cache/README.md`
-- `.pytest_cache/v/cache/nodeids`
 - `LICENSE`
+- `MANIFEST.md`
 - `README.md`
 - `TEST_RESULTS.md`
 - `case-studies/01-requirements-to-delivery-pack.md`
@@ -29,14 +26,8 @@
 - `requirements.txt`
 - `skills/codex-skills.md`
 - `src/__init__.py`
-- `src/__pycache__/__init__.cpython-313.pyc`
 - `src/ai_sdlc_patterns/__init__.py`
-- `src/ai_sdlc_patterns/__pycache__/__init__.cpython-313.pyc`
-- `src/ai_sdlc_patterns/__pycache__/data_mapping_assistant.cpython-313.pyc`
-- `src/ai_sdlc_patterns/__pycache__/sdlc_pack_generator.cpython-313.pyc`
 - `src/ai_sdlc_patterns/data_mapping_assistant.py`
 - `src/ai_sdlc_patterns/sdlc_pack_generator.py`
-- `tests/__pycache__/test_data_mapping_assistant.cpython-313-pytest-9.0.2.pyc`
-- `tests/__pycache__/test_sdlc_pack_generator.cpython-313-pytest-9.0.2.pyc`
 - `tests/test_data_mapping_assistant.py`
 - `tests/test_sdlc_pack_generator.py`
